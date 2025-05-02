@@ -4,31 +4,32 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-primary text-background py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                Driving Digital Transformation for Uttarakhand's Public Sector
-              </h1>
-              <p className="text-supportingText text-lg mb-8">
-                SSN Consultancy is a newly established IT consulting firm on a mission to revolutionize the way government agencies in Uttarakhand operate. We focus on empowering public sector organizations through innovative, tech-driven solutions.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link href="/services" className="btn-primary">
-                  Explore Our Services
-                </Link>
-                <Link href="/contact" className="btn-secondary">
-                  Get in Touch
-                </Link>
-              </div>
-            </div>
-            <div className="hidden md:block">
-              <img 
-                src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
-                alt="Digital Transformation Visualization" 
-                className="rounded-lg shadow-lg w-full h-auto object-cover"
-              />
+      <section className="relative text-background py-24 lg:py-32 overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/home-hero.png" 
+            alt="Digital Transformation for Government" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-primary bg-opacity-70"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-white drop-shadow-lg">
+              Driving Digital Transformation for Uttarakhand's Public Sector
+            </h1>
+            <p className="text-xl md:text-2xl text-white text-opacity-90 font-light mb-10 drop-shadow">
+              SSN Consultancy is on a mission to revolutionize how government agencies operate through innovative, tech-driven solutions.
+            </p>
+            <div className="flex flex-wrap justify-center gap-6">
+              <Link href="/services" className="btn-primary text-lg px-8 py-4 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                Explore Our Services
+              </Link>
+              <Link href="/contact" className="btn-secondary text-lg px-8 py-4 hover:bg-white hover:text-primary transform hover:-translate-y-1 transition-all duration-300">
+                Get in Touch
+              </Link>
             </div>
           </div>
         </div>
