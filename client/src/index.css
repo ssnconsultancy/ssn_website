@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 33% 98%;
+    --foreground: 222 47% 11%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    --primary: 205 21% 19%;
+    --primary-foreground: 210 40% 98%;
+    
+    --secondary: 210 11% 33%;
+    --secondary-foreground: 210 40% 98%;
+    
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --highlight: 9 100% 56%;
+    --highlight-foreground: 0 0% 100%;
+    
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    
+    --radius: 0.5rem;
+  }
+ 
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-20;
+  }
+  
+  .nav-link {
+    @apply relative py-2;
+  }
+  
+  .nav-link.active {
+    @apply text-highlight;
+  }
+  
+  .nav-link.active::after {
+    content: '';
+    @apply absolute left-0 bottom-0 w-full h-0.5 bg-highlight;
+  }
+  
+  .nav-link:hover {
+    @apply text-highlight transition-colors duration-150;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-4;
+  }
+  
+  .section-divider {
+    @apply w-20 h-1 bg-highlight mx-auto mb-8;
+  }
+  
+  .btn-primary {
+    @apply bg-highlight text-white px-6 py-3 rounded-md font-medium 
+           hover:bg-opacity-90 transition duration-150 inline-block;
+  }
+  
+  .btn-secondary {
+    @apply border border-supportingText text-supportingText px-6 py-3 
+           rounded-md font-medium hover:bg-secondary transition duration-150 inline-block;
+  }
+  
+  .card {
+    @apply bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300;
+  }
+  
+  .text-supportingText {
+    @apply text-[#d9e0e2];
+  }
+}
