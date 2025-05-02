@@ -1,5 +1,4 @@
 import { Link } from "wouter";
-import governmentBuilding from "../assets/government-building.png";
 
 export default function Home() {
   return (
@@ -7,13 +6,14 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative text-background py-24 lg:py-32 overflow-hidden">
         {/* Background Image with Overlay */}
-        <div className="absolute inset-0 z-0">
-          <img 
-            src={governmentBuilding} 
-            alt="Digital Transformation for Government" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-primary bg-opacity-70"></div>
+        <div className="absolute inset-0 z-0" style={{
+          backgroundImage: 'url(/home-bg.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}>
+          {/* Overlay gradient for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-primary/70"></div>
         </div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
