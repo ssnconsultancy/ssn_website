@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import governmentBuilding from "../assets/government-building.png";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/home-hero.png" 
+            src={governmentBuilding} 
             alt="Digital Transformation for Government" 
             className="w-full h-full object-cover"
           />
