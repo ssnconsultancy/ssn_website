@@ -1,5 +1,4 @@
 import { Link } from "wouter";
-import SsnLogo from "./SsnLogo";
 
 export default function Footer() {
   return (
@@ -7,9 +6,8 @@ export default function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
-            <Link href="/" className="flex items-center space-x-2 mb-6">
-              <SsnLogo className="h-10 w-auto" />
-              <div className="font-bold text-xl">SSN Consultancy</div>
+            <Link href="/" className="block mb-6">
+              <div className="font-bold text-2xl text-white">SSN Consultancy</div>
             </Link>
             <p className="text-supportingText mb-6">
               Driving digital transformation for Uttarakhand's public sector through innovative IT solutions and consultancy services.

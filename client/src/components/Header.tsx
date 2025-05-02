@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
-import SsnLogo from "./SsnLogo";
 import { useMobile } from "@/hooks/use-mobile";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [location] = useLocation();
   const isMobile = useMobile();
   
@@ -15,6 +15,20 @@ export default function Header() {
   const closeMenu = () => {
     if (isOpen) setIsOpen(false);
   };
+  
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   
   // Close menu when clicking outside
   useEffect(() => {
@@ -52,12 +66,11 @@ export default function Header() {
   ];
   
   return (
-    <header className="bg-primary text-background sticky top-0 z-50">
+    <header className={`bg-primary text-background sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'shadow-md py-2' : 'py-4'}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          <Link href="/" className="flex items-center space-x-2">
-            <SsnLogo className="h-12 w-auto" />
-            <div className="font-bold text-xl md:text-2xl">SSN Consultancy</div>
+        <div className="flex justify-between items-center">
+          <Link href="/" className="font-bold text-2xl md:text-3xl tracking-tight hover:text-highlight transition-colors">
+            SSN Consultancy
           </Link>
           
           {/* Desktop Navigation */}
@@ -66,7 +79,7 @@ export default function Header() {
               <Link 
                 key={item.path}
                 href={item.path}
-                className={`nav-link ${isActive(item.path) ? "active" : ""}`}
+                className={`nav-link text-base font-medium hover:text-highlight transition-colors ${isActive(item.path) ? "active" : ""}`}
               >
                 {item.name}
               </Link>
@@ -81,7 +94,7 @@ export default function Header() {
               onClick={toggleMenu}
               aria-expanded={isOpen}
               aria-label="Toggle navigation menu"
-              className="text-background hover:text-highlight"
+              className="text-background hover:text-highlight transition-colors"
             >
               <i className={`fas ${isOpen ? "fa-times" : "fa-bars"} text-2xl`}></i>
             </button>
@@ -91,14 +104,14 @@ export default function Header() {
         {/* Mobile Navigation Menu */}
         <div 
           id="mobile-menu" 
-          className={`md:hidden pb-4 ${isOpen ? "block" : "hidden"}`}
+          className={`md:hidden py-4 ${isOpen ? "block" : "hidden"}`}
         >
-          <div className="flex flex-col space-y-3">
+          <div className="flex flex-col space-y-3 border-t border-opacity-20 border-white pt-4 mt-4">
             {navItems.map((item) => (
               <Link 
                 key={item.path}
                 href={item.path}
-                className={`nav-link py-2 ${isActive(item.path) ? "active" : ""}`}
+                className={`nav-link py-2 text-base font-medium ${isActive(item.path) ? "active" : ""}`}
               >
                 {item.name}
               </Link>

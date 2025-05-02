@@ -17,18 +17,10 @@ export default function CeoMessage() {
       <section className="section-padding">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-10 mb-12">
-              <div className="flex-shrink-0">
-                <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=774&q=80" 
-                  alt="CEO Abhinav Chauhan" 
-                  className="rounded-full w-40 h-40 object-cover border-4 border-highlight"
-                />
-              </div>
-              <div>
-                <h2 className="text-3xl font-bold mb-3">Abhinav Chauhan</h2>
-                <p className="text-highlight text-xl mb-6">CEO & Founder, PMO Expert & Gen AI Engineer</p>
-              </div>
+            <div className="mb-12 text-center">
+              <h2 className="text-3xl font-bold mb-3">Abhinav Chauhan</h2>
+              <p className="text-highlight text-xl mb-6">CEO & Founder, PMO Expert & Gen AI Engineer</p>
+              <div className="w-24 h-1 bg-highlight mx-auto"></div>
             </div>
             
             <div className="prose prose-lg max-w-none text-secondary">

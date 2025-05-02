@@ -85,20 +85,16 @@ export default function Home() {
           </div>
 
           {/* CEO Message Preview */}
-          <div className="mt-16 bg-primary text-background p-8 rounded-lg">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-center">
-              <div className="col-span-1">
-                <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=774&q=80" 
-                  alt="CEO Abhinav Chauhan" 
-                  className="rounded-full w-40 h-40 object-cover mx-auto"
-                />
-              </div>
-              <div className="col-span-3">
+          <div className="mt-16 bg-primary text-background p-8 rounded-lg shadow-lg">
+            <div className="max-w-3xl mx-auto">
+              <div className="text-center mb-6">
                 <h3 className="text-2xl font-semibold mb-4">Message from our CEO</h3>
-                <p className="mb-4 text-supportingText">
-                  "As someone who was born and raised in Uttarakhand, I carry a deep connection to this land—its people, its culture, and its potential. My journey in the IT industry has taken me across projects and teams where innovation and efficiency were the norm. But each time I returned home, I noticed a stark contrast..."
-                </p>
+                <div className="w-16 h-1 bg-highlight mx-auto"></div>
+              </div>
+              <p className="mb-8 text-supportingText text-lg leading-relaxed italic text-center">
+                "As someone who was born and raised in Uttarakhand, I carry a deep connection to this land—its people, its culture, and its potential. My journey in the IT industry has taken me across projects and teams where innovation and efficiency were the norm. But each time I returned home, I noticed a stark contrast..."
+              </p>
+              <div className="flex justify-center">
                 <Link href="/ceo-message" className="btn-primary">
                   Read Full Message
                 </Link>
@@ -182,31 +178,27 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="grid grid-cols-1 lg:grid-cols-2">
-              <div className="p-8 lg:p-12">
+          <div className="bg-white rounded-lg shadow-lg">
+            <div className="p-8 lg:p-12">
+              <div className="text-center mb-6">
                 <span className="inline-block px-4 py-1 bg-highlight bg-opacity-10 text-highlight rounded-full text-sm font-medium mb-4">
                   Featured Project
                 </span>
                 <h3 className="text-2xl font-bold mb-4">Transforming Project Visibility at 12th Wonder</h3>
-                <p className="text-secondary mb-6">
+              </div>
+              
+              <div className="max-w-3xl mx-auto">
+                <p className="text-secondary mb-8 text-lg">
                   In a standout achievement that reflects our capability and commitment, 12th Wonder, a leading technology company, entrusted Abhinav Chauhan, our PMO Expert & Gen AI Engineer, with the development of a comprehensive PMO Dashboard solution.
                 </p>
-                <blockquote className="border-l-4 border-highlight pl-4 italic text-secondary mb-6">
+                <blockquote className="border-l-4 border-highlight pl-6 py-4 italic text-secondary mb-8 bg-gray-50 rounded-r-lg">
                   "What Abhinav delivered in just 6 months completely changed how we operate. The PMO dashboards gave us real-time visibility we didn't even know we needed—now, it's impossible to imagine working without them."
                 </blockquote>
-                <div className="flex items-center">
+                <div className="flex justify-center">
                   <Link href="/success-story" className="btn-primary">
                     View Full Case Study
                   </Link>
                 </div>
-              </div>
-              <div className="hidden lg:block">
-                <img 
-                  src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1136&q=80" 
-                  alt="12th Wonder Project Dashboard" 
-                  className="h-full w-full object-cover"
-                />
               </div>
             </div>
           </div>
