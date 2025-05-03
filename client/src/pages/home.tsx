@@ -181,11 +181,20 @@ export default function Home() {
 
           <div className="bg-white rounded-lg shadow-lg">
             <div className="p-8 lg:p-12">
-              <div className="text-center mb-6">
-                <span className="inline-block px-4 py-1 bg-highlight bg-opacity-10 text-highlight rounded-full text-sm font-medium mb-4">
-                  Featured Project
-                </span>
-                <h3 className="text-2xl font-bold mb-4">Transforming Project Visibility at 12th Wonder</h3>
+              <div className="flex flex-col md:flex-row items-center justify-between mb-8">
+                <div className="mb-6 md:mb-0 text-center md:text-left">
+                  <span className="inline-block px-4 py-1 bg-highlight bg-opacity-10 text-highlight rounded-full text-sm font-medium mb-4">
+                    Featured Project
+                  </span>
+                  <h3 className="text-2xl font-bold">Transforming Project Visibility at 12th Wonder</h3>
+                </div>
+                <div className="w-40 md:w-48">
+                  <img 
+                    src="/images/12w-logo.png" 
+                    alt="12th Wonder Logo" 
+                    className="w-full h-auto"
+                  />
+                </div>
               </div>
               
               <div className="max-w-3xl mx-auto">

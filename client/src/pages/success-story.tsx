@@ -77,17 +77,21 @@ export default function SuccessStory() {
                 </div>
               </div>
               <div className="hidden lg:block">
-                <div className="h-full">
-                  <img 
-                    src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1136&q=80" 
-                    alt="12th Wonder Project Dashboard" 
-                    className="h-1/2 w-full object-cover"
-                  />
-                  <img 
-                    src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" 
-                    alt="Team working on dashboard implementation" 
-                    className="h-1/2 w-full object-cover"
-                  />
+                <div className="h-full flex flex-col">
+                  <div className="h-1/2 bg-white p-8 flex items-center justify-center">
+                    <img 
+                      src="/images/12w-logo.png" 
+                      alt="12th Wonder Logo" 
+                      className="max-h-full w-auto object-contain"
+                    />
+                  </div>
+                  <div className="h-1/2 bg-[#1a2b5c] p-8 flex items-center justify-center">
+                    <img 
+                      src="/images/12w-project.png" 
+                      alt="12th Wonder Project" 
+                      className="max-h-full w-auto object-contain"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
