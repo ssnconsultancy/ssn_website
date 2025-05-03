@@ -70,13 +70,15 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <Link href="/" className="group flex items-center">
-            {/* Logo with hover effect */}
-            <div className="relative overflow-hidden mr-3">
-              <img 
-                src="/images/ssn-logo.png" 
-                alt="SSN Consultancy Logo" 
-                className="h-12 w-auto transform group-hover:scale-105 transition-all duration-300"
-              />
+            {/* Logo with hover effect and background */}
+            <div className="relative mr-4 bg-white/10 backdrop-blur-sm p-2 rounded-lg border border-white/20 shadow-lg flex items-center justify-center">
+              <div className="bg-white/90 rounded p-1 backdrop-blur-sm">
+                <img 
+                  src="/images/ssn-logo.png" 
+                  alt="SSN Consultancy Logo" 
+                  className="h-10 w-auto transform group-hover:scale-105 transition-all duration-300"
+                />
+              </div>
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-xl md:text-2xl tracking-tight text-white group-hover:text-highlight transition-colors duration-300">
