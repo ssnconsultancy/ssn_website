@@ -74,7 +74,7 @@ export default function Header() {
             <div className="relative mr-4 bg-white/10 backdrop-blur-sm p-2 rounded-lg border border-white/20 shadow-lg flex items-center justify-center">
               <div className="bg-white/90 rounded p-1 backdrop-blur-sm">
                 <img 
-                  src="/images/ssn-logo.png" 
+                  src="ssn-logo.png" 
                   alt="SSN Consultancy Logo" 
                   className="h-10 w-auto transform group-hover:scale-105 transition-all duration-300"
                 />
